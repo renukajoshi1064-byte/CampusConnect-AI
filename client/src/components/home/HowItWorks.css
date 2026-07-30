@@ -1,0 +1,114 @@
+.how-section{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 40px;
+}
+
+.how-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.how-badge{
+    display:inline-block;
+    background:#EEF4FF;
+    color:#2563EB;
+    padding:8px 18px;
+    border-radius:50px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.how-header h2{
+    font-size:42px;
+    margin-bottom:15px;
+    color:#0F172A;
+}
+
+.how-header p{
+    max-width:650px;
+    margin:auto;
+    color:#64748B;
+    line-height:1.7;
+}
+
+.how-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+}
+
+.how-card{
+    flex:1;
+    background:#fff;
+    padding:35px;
+    border-radius:24px;
+    text-align:center;
+    border:1px solid #EEF2F7;
+    box-shadow:0 15px 40px rgba(15,23,42,.08);
+    transition:.35s;
+}
+
+.how-card:hover{
+    transform:translateY(-8px);
+}
+
+.step-number{
+    width:45px;
+    height:45px;
+    margin:auto;
+    border-radius:50%;
+    background:#2563EB;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.how-icon{
+    width:75px;
+    height:75px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#2563EB,#7C3AED);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.how-card h3{
+    margin-bottom:15px;
+    color:#0F172A;
+}
+
+.how-card p{
+    color:#64748B;
+    line-height:1.7;
+}
+
+.arrow{
+    font-size:40px;
+    color:#2563EB;
+    font-weight:bold;
+}
+
+@media(max-width:992px){
+
+.how-container{
+    flex-direction:column;
+}
+
+.arrow{
+    transform:rotate(90deg);
+}
+
+.how-header h2{
+    font-size:34px;
+}
+
+}

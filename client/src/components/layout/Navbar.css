@@ -1,0 +1,327 @@
+.navbar {
+  width: 100%;
+  min-height: 102px;
+
+  padding: 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  border-bottom:
+    1px solid rgba(91, 112, 160, 0.14);
+
+  box-shadow:
+    0 7px 25px rgba(46, 61, 100, 0.05);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  position: relative;
+
+  z-index: 50;
+}
+
+/* Logo */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-width: 310px;
+}
+
+.logo-icon {
+  width: 63px;
+  height: 63px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4d73d1,
+      #3159b8
+    );
+
+  border-radius: 20px 20px 20px 7px;
+
+  box-shadow:
+    0 9px 22px rgba(55, 86, 175, 0.22);
+}
+
+.logo-text h2 {
+  margin: 0;
+
+  color: #27334d;
+
+  font-size: 24px;
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+.logo-text h2 span {
+  color: #476aca;
+}
+
+.logo-text p {
+  margin: 3px 0 0;
+
+  color: #66728a;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Center navigation */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 46px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links a {
+  position: relative;
+
+  padding: 39px 0;
+
+  color: #4c5871;
+
+  font-size: 15px;
+  font-weight: 550;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+  height: 2px;
+
+  left: 50%;
+  bottom: 27px;
+
+  background: #3f66c8;
+
+  border-radius: 5px;
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active-link {
+  color: #315bc2;
+}
+
+.nav-links a:hover::after,
+.nav-links .active-link::after {
+  width: 42px;
+}
+
+/* Sign-in */
+
+.navbar-signin {
+  min-width: 141px;
+  height: 57px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #315bc2;
+
+  background:
+    rgba(255, 255, 255, 0.48);
+
+  border:
+    1.5px solid #3f66c8;
+
+  border-radius: 16px;
+
+  font-size: 15px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.navbar-signin:hover {
+  color: white;
+
+  background: #3f66c8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(55, 91, 190, 0.22);
+}
+
+/* Mobile menu button */
+
+.mobile-menu {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #315bc2;
+
+  background:
+    rgba(255, 255, 255, 0.7);
+
+  border:
+    1px solid rgba(61, 94, 180, 0.18);
+
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+
+  .navbar {
+    padding: 0 28px;
+  }
+
+  .navbar-logo {
+    min-width: auto;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    min-height: 82px;
+
+    padding: 0 20px;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 16px 16px 16px 6px;
+  }
+
+  .logo-text h2 {
+    font-size: 19px;
+  }
+
+  .logo-text p {
+    font-size: 10px;
+  }
+
+  .nav-links {
+    position: absolute;
+
+    top: 82px;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 10px 20px 20px;
+
+    background:
+      rgba(250, 252, 255, 0.97);
+
+    border-bottom:
+      1px solid rgba(91, 112, 160, 0.14);
+
+    box-shadow:
+      0 15px 30px rgba(46, 61, 100, 0.1);
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+
+    padding: 15px;
+
+    text-align: center;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .navbar-signin {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+}
+
+/* Small mobile */
+
+@media (max-width: 420px) {
+
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .logo-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .logo-text h2 {
+    font-size: 17px;
+  }
+
+  .logo-text p {
+    display: none;
+  }
+
+}

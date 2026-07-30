@@ -1,0 +1,731 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.student-register-page {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: #f7f8fc;
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.register-info-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 42px 60px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4d70cf,
+      #725fc5
+    );
+}
+
+.register-info-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -190px;
+  right: -160px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+}
+
+.register-info-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  bottom: -180px;
+  left: -140px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+}
+
+/* Logo */
+
+.register-logo {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.register-logo-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(255, 255, 255, 0.15);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
+
+  border-radius: 15px;
+}
+
+.register-logo h2 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.register-logo h2 span {
+  color: #dce4ff;
+}
+
+.register-logo p {
+  margin: 4px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 11px;
+}
+
+/* Main content */
+
+.register-info-content {
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 490px;
+
+  margin: auto 0;
+}
+
+.register-tag {
+  display: inline-flex;
+
+  margin-bottom: 20px;
+
+  padding: 8px 13px;
+
+  color: white;
+
+  background:
+    rgba(255, 255, 255, 0.13);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+
+  border-radius: 30px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.register-info-content h1 {
+  margin: 0;
+
+  max-width: 470px;
+
+  font-size: 45px;
+
+  line-height: 1.14;
+}
+
+.register-info-content h1 span {
+  display: block;
+
+  color: #dce4ff;
+}
+
+.register-info-content > p {
+  max-width: 430px;
+
+  margin: 20px 0 28px;
+
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* Benefits */
+
+.register-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.register-benefits div {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+}
+
+.register-benefits svg {
+  color: #dce4ff;
+}
+
+/* Copyright */
+
+.register-copyright {
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.register-form-section {
+  min-height: 100vh;
+
+  padding: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8f9fd;
+}
+
+.register-form-card {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 36px 42px;
+
+  background: white;
+
+  border:
+    1px solid #e8ecf4;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 55px
+    rgba(58, 68, 108, 0.1);
+}
+
+/* Heading */
+
+.register-form-heading {
+  margin-bottom: 24px;
+}
+
+.register-form-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #536fc8;
+
+  background: #edf2ff;
+
+  border-radius: 14px;
+}
+
+.register-form-heading h2 {
+  margin: 0;
+
+  color: #293550;
+
+  font-size: 27px;
+}
+
+.register-form-heading p {
+  margin: 8px 0 0;
+
+  color: #8590a3;
+
+  font-size: 13px;
+}
+
+/* Inputs */
+
+.register-input-group {
+  margin-bottom: 15px;
+}
+
+.register-input-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #4d5870;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.register-input-box {
+  height: 49px;
+
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #9aa4b6;
+
+  background: #fafbfe;
+
+  border:
+    1px solid #e3e7ef;
+
+  border-radius: 12px;
+}
+
+.register-input-box:focus-within {
+  border-color: #657fd0;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(83, 111, 200, 0.1);
+}
+
+.register-input-box input {
+  width: 100%;
+
+  color: #37425a;
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  font-size: 13px;
+}
+
+.register-input-box input::placeholder {
+  color: #adb5c3;
+}
+
+.register-password-toggle {
+  padding: 0;
+
+  display: flex;
+
+  color: #8d97a8;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+/* Terms */
+
+.terms-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin: 5px 0 19px;
+
+  color: #7e899c;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.terms-row input {
+  margin-top: 2px;
+
+  accent-color: #536fc8;
+}
+
+.terms-row span {
+  color: #536fc8;
+
+  font-weight: 700;
+}
+
+/* Register button */
+
+.register-submit-btn {
+  width: 100%;
+  height: 51px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4d70cf,
+      #725fc5
+    );
+
+  border: none;
+  border-radius: 13px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 25px
+    rgba(79, 102, 194, 0.23);
+
+  transition:
+    transform 0.2s ease;
+}
+
+.register-submit-btn:hover {
+  transform:
+    translateY(-2px);
+}
+
+/* Login switch */
+
+.register-switch {
+  display: flex;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 20px;
+
+  color: #8993a5;
+
+  font-size: 12px;
+}
+
+.register-switch button {
+  padding: 0;
+
+  color: #526eca;
+
+  background: transparent;
+
+  border: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .student-register-page {
+    grid-template-columns: 1fr;
+  }
+
+  .register-info-section {
+    min-height: auto;
+
+    padding: 32px;
+  }
+
+  .register-info-content,
+  .register-copyright {
+    display: none;
+  }
+
+  .register-form-section {
+    min-height: auto;
+
+    padding: 35px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .register-info-section {
+    padding: 24px 20px;
+  }
+
+  .register-form-section {
+    padding: 20px;
+  }
+
+  .register-form-card {
+    padding: 28px 21px;
+  }
+
+}
+/* Register submit button */
+
+.register-submit-btn {
+  width: 100%;
+  height: 52px;
+
+  margin-top: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #4d70cf,
+    #725fc5
+  );
+
+  border: none;
+  border-radius: 13px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 22px
+    rgba(77, 112, 207, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.register-submit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px
+    rgba(77, 112, 207, 0.3);
+}
+
+.register-submit-btn:active {
+  transform: translateY(0);
+}
+/* =====================
+   LOGIN / REGISTER SWITCH
+===================== */
+
+.auth-switch {
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  color: #7d879a;
+
+  font-size: 13px;
+}
+
+.auth-switch span {
+  color: #7d879a;
+}
+
+.auth-switch button {
+  padding: 4px 6px;
+
+  color: #4d70cf;
+
+  background: transparent;
+
+  border: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.auth-switch button:hover {
+  color: #725fc5;
+
+  text-decoration: underline;
+
+  transform: translateY(-1px);
+}
+
+.auth-switch button:active {
+  transform: translateY(0);
+}
+/* =========================
+   EMAIL VALIDATION
+========================= */
+
+.validation-message {
+  margin: 6px 0 0;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.error-message {
+  color: #dc5a67;
+}
+
+.success-message {
+  color: #24956f;
+}
+
+
+/* =========================
+   PASSWORD STRENGTH
+========================= */
+
+.password-strength {
+  margin-top: 9px;
+}
+
+.strength-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  font-size: 10px;
+
+  color: #7d8799;
+}
+
+.strength-header strong {
+  font-size: 10px;
+}
+
+.strength-header .strength-1 {
+  color: #dc5a67;
+}
+
+.strength-header .strength-2 {
+  color: #d38a35;
+}
+
+.strength-header .strength-3 {
+  color: #24956f;
+}
+
+.strength-bars {
+  display: flex;
+
+  gap: 5px;
+}
+
+.strength-bars span {
+  width: 100%;
+
+  height: 5px;
+
+  background: #e7eaf1;
+
+  border-radius: 20px;
+
+  transition: 0.25s ease;
+}
+
+.strength-bars span.active.strength-1 {
+  background: #dc5a67;
+}
+
+.strength-bars span.active.strength-2 {
+  background: #d38a35;
+}
+
+.strength-bars span.active.strength-3 {
+  background: #24956f;
+}
+
+.password-help {
+  margin: 7px 0 0;
+
+  color: #8a94a6;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}

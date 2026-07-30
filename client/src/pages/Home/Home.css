@@ -1,0 +1,71 @@
+.home-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("../../assets/images/campus-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Soft white layer over the campus image */
+.background-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(248, 250, 255, 0.62);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+
+  z-index: 0;
+}
+
+/* Keeps all page content above the background */
+
+.home-content {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding-bottom: 18px;
+}
+
+.copyright-text {
+  margin: 18px 0 0;
+
+  text-align: center;
+
+  color: #526078;
+
+  font-size: 14px;
+}
+
+.copyright-text span {
+  color: #315cc4;
+  font-weight: 600;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .home-page {
+    background-attachment: scroll;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .home-content {
+    padding-bottom: 14px;
+  }
+
+  .copyright-text {
+    padding: 0 20px;
+    font-size: 13px;
+  }
+}

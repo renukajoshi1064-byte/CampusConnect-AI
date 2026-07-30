@@ -1,0 +1,217 @@
+.hero-section {
+  width: 100%;
+  padding: 92px 25px 55px;
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Small top badge */
+
+.hero-badge {
+  width: fit-content;
+  margin: 0 auto 25px;
+  padding: 9px 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #4564a7;
+  background: rgba(255, 255, 255, 0.68);
+
+  border: 1px solid rgba(89, 120, 190, 0.18);
+  border-radius: 50px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow: 0 8px 25px rgba(56, 77, 125, 0.07);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #5f77d6;
+
+  box-shadow: 0 0 0 5px rgba(95, 119, 214, 0.12);
+}
+
+/* Main heading */
+
+.hero-title {
+  margin: 0;
+
+  color: #202b47;
+
+  font-size: clamp(45px, 6vw, 76px);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -2.8px;
+}
+
+.title-blue {
+  color: #4268c9;
+}
+
+.title-purple {
+  color: #8a62c9;
+}
+
+/* Description */
+
+.hero-description {
+  max-width: 690px;
+  margin: 25px auto 31px;
+
+  color: #64708a;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  min-height: 52px;
+  padding: 0 23px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 13px;
+
+  font-size: 15px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Main button */
+
+.hero-primary-btn {
+  color: white;
+
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #5274d4,
+    #765cc4
+  );
+
+  box-shadow:
+    0 12px 25px rgba(82, 104, 190, 0.25);
+}
+
+.hero-primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 30px rgba(82, 104, 190, 0.32);
+}
+
+/* Secondary button */
+
+.hero-secondary-btn {
+  color: #43516f;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(81, 101, 145, 0.18);
+
+  box-shadow:
+    0 8px 20px rgba(52, 66, 105, 0.07);
+}
+
+.hero-secondary-btn:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.play-icon {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6374bd;
+
+  background: #eef1ff;
+
+  border-radius: 50%;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 65px;
+  }
+
+  .hero-title {
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+  .hero-section {
+    padding: 52px 18px 40px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 8px 13px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    width: 100%;
+  }
+}
